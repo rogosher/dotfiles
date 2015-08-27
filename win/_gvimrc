@@ -1,0 +1,15 @@
+" Use a better font.
+if has('gui_running')
+	set guifont=Liberation_Mono:h10:cANSI
+endif
+
+" Set color to 256 if in gui.
+set t_Co=256
+color molokai
+
+" Windows ssh editing.
+let g:netrw_cygwin = 0
+let g:netrw_ssh_cmd = '"C:\bin\putty\plink.exe" -batch -T -ssh'
+let g:netrw_scp_cmd = '"C:\bin\putty\pscp.exe" -batch -q -scp'
+let g:netrw_sftp_cmd = '"C:\bin\putty\pscp.exe" -batch -q -sftp'
+let g:netrw_list_cmd = '"C:\bin\putty\plink.exe" HOSTNAME ls -Fa'
