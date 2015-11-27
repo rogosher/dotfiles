@@ -21,8 +21,12 @@ nnoremap <space> za
 onoremap <F9> <C-c>za
 vnoremap <space> zf
 
-
-set t_Co=256
+if $TERM == "cygwin"
+  set t_Co=16
+else
+  set t_Co=256
+endif
+  
 color molokai
 let g:rehash256=1
 "let g:molokai_original=1
